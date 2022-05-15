@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<title>PRACTICA 3 IRAC</title>
+</head>
+
+<body>
+	<h1> Implementación del cliente web </h1>
+
+    
+	<video class="dashjs-player" height="60%" width="60%" autoplay controls preload="auto">
+	  <source src="https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd" type="application/dash+xml"/>
+	</video>
+
+	<script>
+	  var player;
+	  document.addEventListener("DOMContentLoaded", function () {
+	    init();
+	  });
+	  function init(){
+	    player = dashjs.MediaPlayerFactory.create(document.querySelector(".dashjs-player"));
+	  };
+	</script>
+    <script src="dash.all.min.js"></script>
+
+</body>
+
+</html>
